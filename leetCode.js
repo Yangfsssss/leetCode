@@ -17,7 +17,6 @@
 //     return result < Math.pow(-2, 31) || result > (Math.pow(2, 31) - 1) ? 0 : result
 
 // }
-
 // console.log(reverse(-5548));
 // console.log(reverse(1534236469));
 
@@ -28,7 +27,6 @@
 //     console.log(((x + '').split('').reverse().join('') - 0));
 //     return x === ((x + '').split('').reverse().join('') - 0)
 // }
-
 // console.log(isPalindrome(123454321));
 
 
@@ -84,28 +82,47 @@
 
 //     return result
 // }
-
 // console.log(romanToInt('MCMXCIV'));
-
 // console.log('abcdefg'.indexOf('ab'));
 
 
 // leetCode 14
-const longestCommonPrefix = strs => {
-    let shortest
+// const longestCommonPrefix = strs => {
+//     if (strs.length === 0) return ''
+//     if (strs.length === 1) return strs[0]
 
-    for (let i = 0; i < strs.length; i++) {
-        shortest = strs[i].length < strs[i + 1].length ? strs[i].length : strs[i + 1].length
-    }
+//     let shortest = strs[0].length
 
-    while (j=0,k=0,j<str.length) {
-        if(strs[j][k]===strs[j+1][k]){
-            j++
-        }
-    }
-}
+//     for (let i = 0, k = 0; i < strs.length - 1; i++) {
+//         if (strs[k].length > strs[i + 1].length) {
+//             shortest = strs[i + 1].length
+//             k = i + 1
+//         }
+//     }
 
-console.log('racecar'[0]);
+//     let result = []
+
+//     for (let j = 1, l = 0; l < shortest;) {
+//         if (strs[0].charAt(l) === strs[j].charAt(l)) {
+//             j++
+
+//             if (j === strs.length) {
+//                 result.push(strs[0].charAt(l))
+//                 j = 1
+//                 l++
+//             }
+//         } else if (l > 0) {
+//             return result.join('')
+//         } else {
+//             return ''
+//         }
+//     }
+
+//     return result.join('')
+// }
+
+
+// leetcode 20
 
 
 
