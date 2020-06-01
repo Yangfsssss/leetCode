@@ -15,7 +15,6 @@
 // const reverse = x => {
 //     const result = x < 0 ? - ((-x + '').split('').reverse().join('') - 0) : ((x + '').split('').reverse().join('') - 0)
 //     return result < Math.pow(-2, 31) || result > (Math.pow(2, 31) - 1) ? 0 : result
-
 // }
 // console.log(reverse(-5548));
 // console.log(reverse(1534236469));
@@ -33,7 +32,6 @@
 // leetCode 13
 // const romanToInt = s => {
 //     let result = 0
-
 //     s.split('').map(i => {
 //         switch (i) {
 //             case 'M':
@@ -59,7 +57,6 @@
 //                 break;
 //         }
 //     })
-
 //     if (s.indexOf('IV') != -1) {
 //         result -= 2
 //     }
@@ -78,8 +75,6 @@
 //     if (s.indexOf('CM') != -1) {
 //         result -= 200
 //     }
-
-
 //     return result
 // }
 // console.log(romanToInt('MCMXCIV'));
@@ -90,22 +85,17 @@
 // const longestCommonPrefix = strs => {
 //     if (strs.length === 0) return ''
 //     if (strs.length === 1) return strs[0]
-
 //     let shortest = strs[0].length
-
 //     for (let i = 0, k = 0; i < strs.length - 1; i++) {
 //         if (strs[k].length > strs[i + 1].length) {
 //             shortest = strs[i + 1].length
 //             k = i + 1
 //         }
 //     }
-
 //     let result = []
-
 //     for (let j = 1, l = 0; l < shortest;) {
 //         if (strs[0].charAt(l) === strs[j].charAt(l)) {
 //             j++
-
 //             if (j === strs.length) {
 //                 result.push(strs[0].charAt(l))
 //                 j = 1
@@ -117,7 +107,6 @@
 //             return ''
 //         }
 //     }
-
 //     return result.join('')
 // }
 
