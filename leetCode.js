@@ -111,7 +111,79 @@
 // }
 
 
-// leetcode 20
+// leetCode 20
+const isValid = s => {
+    if (s.length === 0) return true
+
+    let array = []
+
+    s.split('').map(item => {
+        switch (item) {
+            case '(':
+                array.push(1)
+                break;
+            case ')':
+                array.push(-1)
+                break;
+            case '{':
+                array.push(2)
+                break;
+            case '}':
+                array.push(-2)
+                break;
+            case '[':
+                array.push(3)
+                break;
+            case ']':
+                array.push(-3)
+                break;
+            default:
+                break;
+        }
+    })
+
+    console.log(array);
+    console.log(array.length);
+
+
+    if (array.length === 2) {
+        if (array[0] + array[1] === 0) return true
+        else return false
+    }
+
+    if ((array.length / 2) % 2 === 0) {
+        for (let i = array.length / 2 - 1, j = array.length / 2; j < array.length; j++) {
+            if (array[i] + array[i - 1] === 0 && array[j] + array[j + 1] === 0) {
+                console.log(i, j, array[i], array[j]);
+                i--
+                j += 2
+            }
+            else return false
+        }
+        return true
+    }
+    else {
+        for (let i = array.length / 2 - 1, j = array.length / 2; j < array.length; j++) {
+            if (array[i] + array[j] === 0) {
+                
+            }
+            else return false
+        }
+        return true
+    }
+}
+// () = 1
+// {} = 2
+// [] = 3
+// 1,-1,2,-2,3,-3
+// ()[]{}{}
+// ()[]{}
+console.log(isValid("()"));
+console.log(isValid("()[]{}"));
+console.log(isValid("(]"));
+console.log(isValid("{[]}"));
+
+// console.log(isValid("([)]"));
 
 
 
