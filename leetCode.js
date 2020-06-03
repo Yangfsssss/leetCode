@@ -112,78 +112,72 @@
 
 
 // leetCode 20
-const isValid = s => {
-    if (s.length === 0) return true
+// const isValid = s => {
+//     if (s.length === 0) return true
+//     if (s.length === 1) return false
 
-    let array = []
+//     let i = -1
+//     let array = []
 
-    s.split('').map(item => {
-        switch (item) {
-            case '(':
-                array.push(1)
-                break;
-            case ')':
-                array.push(-1)
-                break;
-            case '{':
-                array.push(2)
-                break;
-            case '}':
-                array.push(-2)
-                break;
-            case '[':
-                array.push(3)
-                break;
-            case ']':
-                array.push(-3)
-                break;
-            default:
-                break;
-        }
-    })
+//     for (item of s.split('')) {
+//         switch (item) {
+//             case '(':
+//                 i++
+//                 array.push(1)
+//                 continue
+//             case '{':
+//                 i++
+//                 array.push(2)
+//                 continue
+//             case '[':
+//                 i++
+//                 array.push(3)
+//                 continue
+//             case ')':
+//                 if (array[i] != 1) return false
+//                 array.pop()
+//                 i--
+//                 break;
+//             case '}':
+//                 if (array[i] != 2) return false
+//                 array.pop()
+//                 i--
+//                 break;
+//             case ']':
+//                 if (array[i] != 3) return false
+//                 array.pop()
+//                 i--
+//                 break;
+//         }
 
-    console.log(array);
-    console.log(array.length);
+//         // console.log(array);
+//         // console.log(array.length);
 
+//         // return result.pop() == false ? false : true
 
-    if (array.length === 2) {
-        if (array[0] + array[1] === 0) return true
-        else return false
-    }
-
-    if ((array.length / 2) % 2 === 0) {
-        for (let i = array.length / 2 - 1, j = array.length / 2; j < array.length; j++) {
-            if (array[i] + array[i - 1] === 0 && array[j] + array[j + 1] === 0) {
-                console.log(i, j, array[i], array[j]);
-                i--
-                j += 2
-            }
-            else return false
-        }
-        return true
-    }
-    else {
-        for (let i = array.length / 2 - 1, j = array.length / 2; j < array.length; j++) {
-            if (array[i] + array[j] === 0) {
-                
-            }
-            else return false
-        }
-        return true
-    }
-}
+//     }
+//     return array.length === 0 ? true : false
+// }
 // () = 1
 // {} = 2
 // [] = 3
 // 1,-1,2,-2,3,-3
 // ()[]{}{}
 // ()[]{}
-console.log(isValid("()"));
-console.log(isValid("()[]{}"));
-console.log(isValid("(]"));
-console.log(isValid("{[]}"));
-
+// console.log(isValid("()"));
+// console.log(isValid("()[]{}"));
+// console.log(isValid("(]"));
+// console.log(isValid("{[]}"));
 // console.log(isValid("([)]"));
+
+
+// leetCode 21
+const mergeTwoLists = (l1, l2) => {
+    
+}
+
+
+
 
 
 
