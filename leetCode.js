@@ -173,7 +173,7 @@
 
 // leetCode 21
 // const mergeTwoLists = (l1, l2) => {
-    
+
 // }
 
 
@@ -191,6 +191,27 @@
 // }
 // console.log(removeDuplicates([1, 1, 2]));
 // console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
+
+
+// leetCode 27
+// const removeElement = (nums, val) => {
+//     let i = nums.sort().indexOf(val)
+
+//     if (i === -1) return nums.length
+
+//     let j = nums.sort().lastIndexOf(val)
+
+//     nums.splice(i, j - i + 1)
+
+//     // while (nums[i] === val) {
+//     //     nums.splice(i, 1)
+//     // }
+
+//     return nums.length
+// }
+// console.log(removeElement([3, 2, 2, 3], 3));
+// console.log(removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2));
+
 
 
 
