@@ -213,6 +213,31 @@
 // console.log(removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2));
 
 
+// leetCode 28
+// const strStr = (haystack, needle) => {
+//     if (needle === '') return 0
+
+//     let i = haystack.indexOf(needle)
+
+//     if (i === -1) return -1
+
+//     return i
+// }
+
+// console.log(strStr("hello", "ll"));
+// console.log(strStr("mississippi", "issip"));
+
+
+// leetCode 35
+
+
+// leetCode 38
+const countAndSay = n => {
+
+}
+
+
+                
 
 
 

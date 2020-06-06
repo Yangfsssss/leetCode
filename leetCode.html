@@ -7,6 +7,20 @@
     <title>Document</title>
 </head>
 <script>
+    const toBinaryString = (n) => {
+        let s = ''
+
+        while (n >= 1) {
+            s = n % 2 + s
+            n = parseInt(n / 2)
+        }
+
+        console.log(s);
+        console.log(n.toString(2));
+        
+    }
+
+    toBinaryString(10)
 
 </script>
 
