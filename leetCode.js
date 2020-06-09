@@ -229,6 +229,38 @@
 
 
 // leetCode 35
+// const searchInsert = (nums, target) => {
+//     if (nums.indexOf(target) != -1) return nums.indexOf(target)
+//     if (target < nums[0]) return 0
+//     if (target > nums[nums.length - 1]) return nums.length
+//     let low = 0
+//     let high = nums.length - 1
+//     let mid = nums.length % 2 === 0 ? (low + high + 1) / 2 : (low + high) / 2
+//     let result
+//     let cutLength = 0
+//     if (target > nums[mid]) {
+//         if (mid + 1 != high) {
+//             cutLength = high - mid
+//             result = searchInsert(nums.splice(mid, high - mid + 1), target)
+//         }
+//         else {
+//             result = cutLength + mid + 1
+//         }
+//     } else {
+//         if (low + 1 != mid) result = searchInsert(nums.splice(low, mid - low + 1), target)
+//         else {
+//             result = cutLength + low + 1
+//         }
+//     }
+//     return result + cutLength
+// }
+// console.log(searchInsert([3, 5, 7, 9, 10], 8));
+// console.log(searchInsertPosition([1, 3, 5, 6], 5));
+// console.log(searchInsertPosition([1, 3, 5, 6], 2));
+// console.log(searchInsertPosition([1, 3, 5, 6], 7));
+// console.log(searchInsertPosition([1, 3, 5, 6], 0));
+// console.log(searchInsertPosition([1, 3, 5, 7], 6));
+// console.log(searchInsertPosition([1, 3, 5, 7], 4));
 
 
 // leetCode 38
