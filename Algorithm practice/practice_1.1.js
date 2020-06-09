@@ -34,7 +34,7 @@
 // console.log(isEqual(3, 3, 3));
 // console.log(isEqual(1, 2, 3));
 
-// 1.1.4
+// 1.1.4*
 
 // 1.1.5
 // const midst = (x, y) => {
@@ -87,7 +87,13 @@
 // }
 // c() //10000
 
+
 // 1.1.8
+// console.log(typeof('a'+4));
+
+
+
+// 1.1.9
 // const toBinaryString = (n) => {
 //     let s = ''
 //     console.log(n.toString(2));
@@ -98,3 +104,82 @@
 //     console.log(s);
 // }
 // toBinaryString(123456789)
+
+// 1.1.10*
+
+
+// 1.1.11
+// const printBinaryBooleanArray = nums => {
+//     let matrix = []
+
+//     matrix.length = nums.length
+
+//     // console.log(matrix);
+
+
+//     for (let i = 0; i < nums.length; i++) {
+
+//         matrix[i] = []
+//         matrix[i].length = nums[i].length
+//         // console.log(nums[0], matrix[0]);
+//         // console.log(matrix[0][0]);
+        
+
+//         for (let j = 0; j < nums[i].length; j++) {
+//             matrix[i][j] = nums[i][j] === true ? '*' : ' '
+//             // if (nums[i][j] === true) matrix[i][j] = '*'
+//             // else matrix[i][j] = ' '
+//         }
+//     }
+
+//     return matrix
+// }
+
+// console.log(printBinaryBooleanArray([[true, false, true], [false, true, false], [true, true, false]]));
+
+
+// 1.1.12
+
+
+// 1.1.13
+// const matrixT = nums => {
+//     let result = []
+//     // result.length = 5
+//     // console.log(result);
+
+//     for (let k = 0; k < nums[1].length; k++) {
+//         result.length = nums[1].length
+//         // console.log(result);
+//         result[k] = []
+//         result[k].length = nums.length
+//     }
+
+//     console.log(result);
+//     console.log(result[0][0]);
+    
+    
+
+//     for (let i = 0; i < nums[i].length; i++) {
+//         for (let j = 0; j < nums.length; j++) {
+//             result[i][j] = nums[j][i]
+//         }
+//     }
+
+//     return result
+// }
+
+// console.log(matrixT([
+//     [1, 2],
+//     [3, 4],
+//     [5, 6]
+// ]));
+// [
+//     [1, 2],
+//     [3, 4],
+//     [5, 6]
+// ]
+// [
+//     [1,3,5],
+//     [2,4,6]
+//     
+// ]
