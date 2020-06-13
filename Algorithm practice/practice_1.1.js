@@ -123,7 +123,7 @@
 //         matrix[i].length = nums[i].length
 //         // console.log(nums[0], matrix[0]);
 //         // console.log(matrix[0][0]);
-        
+
 
 //         for (let j = 0; j < nums[i].length; j++) {
 //             matrix[i][j] = nums[i][j] === true ? '*' : ' '
@@ -156,8 +156,8 @@
 
 //     console.log(result);
 //     console.log(result[0][0]);
-    
-    
+
+
 
 //     for (let i = 0; i < nums[i].length; i++) {
 //         for (let j = 0; j < nums.length; j++) {
@@ -183,3 +183,40 @@
 //     [2,4,6]
 //     
 // ]
+
+
+// 1.1.14
+// const lg = n => {
+//     let shiftRightCount = 0
+
+//     do {
+//         n = n / 2
+//         shiftRightCount++
+//     } while (n != 0)
+
+//     return shiftRightCount - 1
+// }
+
+// console.log(lg(1025));
+
+
+// 1.1.15
+const histogram = (nums, n) => {
+    let result = new Array(n)
+
+
+    for (let i = 1; i < n + 1; i++) {
+        let j = 0
+
+        nums.forEach(num => {
+            if (num === i) j++
+        })
+
+        result[i - 1] = j
+    }
+
+    return result
+}
+
+// console.log(histogram([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 3, 5, 7, 9], 8));
+console.log(histogram([1, 2, 3, 4, 5, 6, 7, 1, 3, 5, 7,], 8));
